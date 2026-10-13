@@ -28,6 +28,14 @@ Desenvolver conhecimentos práticos em SQL e MySQL por meio da criação de cons
 - Criação de índices com `CREATE INDEX`.
 - Análise de consultas com `EXPLAIN`.
 
+## Índices e justificativas
+
+- `idx_employee_dno`: criado na coluna `Dno` da tabela `employee` para auxiliar consultas que filtram funcionários por departamento e operações de junção com `departament`.
+- `idx_dept_locations_location`: criado na coluna `Dlocation` da tabela `dept_locations` para auxiliar consultas que filtram ou pesquisam departamentos por cidade.
+
+Os índices podem melhorar o desempenho das consultas, dependendo do plano de execução escolhido pelo otimizador do MySQL. Em contrapartida, ocupam espaço e adicionam custo às operações de inserção, atualização e exclusão.
+
+
 ## Como executar
 
 1. Instale o MySQL Server e o MySQL Workbench.
